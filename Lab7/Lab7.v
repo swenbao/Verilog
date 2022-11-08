@@ -1,12 +1,12 @@
-module Lab7(clock, reset, Up_Down, out);
+module Lab7(clock, reset, Up_Down, a, b, c, d, e, f, g);
 
 input clock, reset, Up_Down;
-output [6:0] out;
+output a, b, c, d, e, f, g;
 wire [3:0] num;
 wire clock_div;
 
 clk_div(clock, reset, clock_div);
 up_down_counter(clock_div, reset, Up_Down, num);
-seven_display(num, out);
+sevenDisplay(num, a, b, c, d, e, f, g);
 
 endmodule

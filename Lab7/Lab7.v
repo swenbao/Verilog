@@ -1,8 +1,8 @@
 module Lab7(clock, reset, Up_Down, out);
 
 input clock, reset, Up_Down;
-output [0:6] out;
-wire [0:3] num;
+output [6:0] out;
+wire [3:0] num;
 wire clock_div;
 
 clk_div(clock, reset, clock_div);

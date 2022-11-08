@@ -1,11 +1,11 @@
-module sevenDisplay(int, out);
+module sevenDisplay(in, a, b, c, d, e, f, g);
 
 input [3:0] in;
 output reg a, b, c, d, e, f, g;
 
 always@(in)
 begin
-    case(num) 
+    case(in) 
         				            //abcdefg
 		4'b0000: {a,b,c,d,e,f,g} = 7'b0000001; //0
 		4'b0001: {a,b,c,d,e,f,g} = 7'b1001111; //1

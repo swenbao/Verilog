@@ -8,8 +8,8 @@ parameter[3:0]ST0 = 4'b0000,
               ST1 = 4'b0001,
               ST2 = 4'b0010,
               ST3 = 4'b0011,
-				  ST4 = 4'b0100,
-				  ST5 = 4'b0101;
+			  ST4 = 4'b0100,
+			  ST5 = 4'b0101;
 
 always@(clock_div, reset)
 begin

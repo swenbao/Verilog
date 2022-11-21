@@ -11,7 +11,7 @@ parameter[3:0]ST0 = 4'b0000,
 			  ST4 = 4'b0100,
 			  ST5 = 4'b0101;
 
-always@(clock_div, reset)
+always@(posedge clock_div or negedge reset)
 begin
     if(reset == 0)
             current = ST0;

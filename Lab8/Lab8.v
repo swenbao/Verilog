@@ -1,4 +1,4 @@
-module top(clk, reset, in, a, b, c, d, e, f, g);
+module Lab8(clk, reset, in, a, b, c, d, e, f, g);
 
 input clk, reset, in;
 wire clock_div, tmp;

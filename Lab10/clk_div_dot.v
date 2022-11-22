@@ -1,6 +1,6 @@
 `define TimeExpire 32'd2500
 
-module clk_div(clk, reset, div_clk);
+module clk_div_dot(clk, reset, div_clk);
 input clk, reset;
 output div_clk;
 

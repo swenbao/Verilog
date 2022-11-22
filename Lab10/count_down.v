@@ -2,29 +2,48 @@ module count_down(clock_div, reset, state, count);
 input clock_div, reset;
 output reg [1:0] state;
 output reg [3:0] count;
+parameter [1:0] ST15 = ;
+
 
 always@(posedge clock_div or negedge reset)
 begin
     if(reset == 0)
-	 begin
+	begin
         count = 4'b1111;
         state = 0;
-	 end
+	end
     else
     begin
-        count = count - 1;
-        if(count == 0)
+        if(state == 0)
         begin
-            case(state)
-                2'b00: state = state + 1;
-                2'b01: state = state + 1;
-                default: state = 0;
+            case(count)
+                4'b0000: // 0 
+                begin
+                    state = state + 1;
+                    count = 4'b0101;
+                end
+                default: count = count - 1; // 15~1
             endcase
-				case(state)
-                2'b00: count = 4'b1111;
-                2'b01: count = 4'b0101;
-                default: count = 4'b1010;
+        end
+        else if(state == 1)
+        begin
+            case(count)
+                4'b0000: // 0 
+                begin
+                    state = state + 1;
+                    count = 4'b1010;
+                end
+                default: count = count - 1; // 5~1
             endcase
+        end
+        else // state == 2
+        begin
+            4'b0000: // 0 
+            begin
+                state = 0;
+                count = 4'b1111;
+            end
+            default: count = count - 1; // 10~1
         end
     end
 end

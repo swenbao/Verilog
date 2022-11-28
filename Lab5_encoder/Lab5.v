@@ -18,6 +18,7 @@ begin
         8'b10000000: {valid, out} = 4'b1111;
         default: {valid, out} = 4'b0000;
     end
+    endcase
 end
 
 

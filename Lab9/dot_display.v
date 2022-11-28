@@ -6,8 +6,8 @@ reg [2:0] row_count;
 
 always @(posedge div_clk or negedge reset) begin
     if(~reset) begin
-        dot_row <= 8b'0;
-        dot_col <= 8b'0;
+        dot_row <= 8'b0;
+        dot_col <= 8'b0;
         row_count <= 0;
     end
     else begin

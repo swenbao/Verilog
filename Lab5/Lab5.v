@@ -1,4 +1,4 @@
-module Lab5()
+module Lab5(a, b, select, out, overflow);
 
 input [3:0] a, b;
 input select;

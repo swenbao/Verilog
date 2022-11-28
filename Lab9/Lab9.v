@@ -1,4 +1,4 @@
-module Lab9();
+module Lab9(clock, reset, dot_row, dot_col);
 
 input clock, reset;
 output [7:0] dot_row, dot_col;

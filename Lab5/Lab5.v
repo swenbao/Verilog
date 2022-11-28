@@ -3,7 +3,7 @@ module Lab5(a, b, select, out, overflow);
 input [3:0] a, b;
 input select;
 output reg [3:0] out;
-output overflow;
+output reg overflow;
 
 always@(a, b, select)
 begin

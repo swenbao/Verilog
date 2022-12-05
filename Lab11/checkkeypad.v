@@ -1,5 +1,5 @@
 `define TimeExpire 32'd250000
-module checkkeypad(clk, reset, keypadRow, keypadCol)
+module checkkeypad(clk, reset, keypadCol, keypadRow)
 
     input clk, reset;
     input [3:0] keypadCol;

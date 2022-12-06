@@ -1,10 +1,8 @@
-module checkkeypad(clk, reset, keypadCol, keypadRow)
+module checkkeypad(clk, reset, keypadCol, keypadBuf)
 
     input clk, reset;
     input [3:0] keypadCol;
-    output reg [3:0] keypadRow;
-
-    reg [3:0] keypadBuf;
+    output reg [3:0] keypadBuf;
 
     always@(posedge clk)
     begin

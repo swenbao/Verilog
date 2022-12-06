@@ -1,5 +1,5 @@
 `define TimeExpire 32'd250000
-module clk_div_7(clk, reset, div_clk);
+module clk_div_100(clk, reset, div_clk);
 input clk, reset;
 output reg div_clk;
 reg [31:0] count;

@@ -1,10 +1,10 @@
-module checkkeypad(clk, reset, keypadCol, keypadBuf)
+module checkkeypad(clk, reset, keypadCol, keypadRow, keypadBuf);
 
     input clk, reset;
     input [3:0] keypadCol;
-    output reg [3:0] keypadBuf;
+    output reg [3:0] keypadBuf, keypadRow;
 
-    always@(posedge clk)
+    always@(posedge clk or negedge reset)
     begin
         if(!reset)
         begin
@@ -37,11 +37,11 @@ module checkkeypad(clk, reset, keypadCol, keypadBuf)
                 default : keypadBuf <= keypadBuf;
             endcase
             case(keypadRow) // switch to next row with every posedge of clk
-                4'b1110 : keypadRow <= 4'1101;
-                4'b1101 : keypadRow <= 4'1011;
-                4'b1011 : keypadRow <= 4'0111;
-                4'b0111 : keypadRow <= 4'1110;
-                default : keypadRow <= 4'1110;
+                4'b1110 : keypadRow <= 4'b1101;
+                4'b1101 : keypadRow <= 4'b1011;
+                4'b1011 : keypadRow <= 4'b0111;
+                4'b0111 : keypadRow <= 4'b1110;
+                default : keypadRow <= 4'b1110;
             endcase
         end
     end

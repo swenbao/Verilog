@@ -1,5 +1,4 @@
-
-module horizontal(clk_div_25M, enable_V_counter, V_count_value)
+module horizontal(clk_div_25M, enable_V_counter, V_count_value);
 
     input clk_div_25M, enable_V_counter;
     output reg [15:0] V_count_value = 0;

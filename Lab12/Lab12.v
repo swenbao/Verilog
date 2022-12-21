@@ -9,7 +9,7 @@ wire enable_V_counter;
 wire [15:0] H_count_value;
 wire [15:0] V_count_value;
 
-clk_div_25M(clk, reset, c1K_25M);
+clk_div_25M(clk, reset, clk_25M);
 horizontal(clk_25M, enable_V_counter, H_count_value);
 vertical(clk_25M, enable_V_counter, V_count_value);
 

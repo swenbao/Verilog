@@ -1,4 +1,4 @@
-module color_manip()
+module color_manip();
 
 input reset, R, G, B;
 input [15:0] H_count_value, V_count_value;

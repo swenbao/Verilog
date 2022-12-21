@@ -1,4 +1,4 @@
-module Lab12 (clock, R, G, B, reset, VGA_red, VGA_green, VGA_blue, H_sync, V_sync)
+module Lab12 (clock, R, G, B, reset, VGA_red, VGA_green, VGA_blue, H_sync, V_sync);
 
 input clock, R, G, B, reset;
 output [3:0] VGA_red, VGA_green, VGA_blue;
